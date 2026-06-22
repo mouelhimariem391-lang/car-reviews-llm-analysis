@@ -1,4 +1,3 @@
-
 # 🚗 Car Reviews LLM Analysis
 
 Prototype de chatbot NLP multi-tâches pour une entreprise fictive de vente et location de voitures ("Car-ing is Sharing"), combinant plusieurs **LLM spécialisés** de Hugging Face pour analyser des avis clients : classification de sentiment, traduction, question-réponse extractive et résumé automatique.
@@ -43,12 +42,13 @@ Le projet répond à quatre besoins métier :
 ```
 car-reviews-llm-analysis/
 │
-├── data/
-│   ├── car_reviews.csv              # Dataset des avis clients
-│   └── reference_translations.txt   # Traductions de référence pour le score BLEU
-│
-├── car_reviews_llm_analysis.ipynb   # Notebook principal
-└── README.md
+└── workspace/
+    ├── data/
+    │   ├── car_reviews.csv              # Dataset des avis clients
+    │   └── reference_translations.txt   # Traductions de référence pour le score BLEU
+    │
+    ├── car.jpeg                         # Image illustrative du projet
+    └── notebook.ipynb                   # Notebook principal
 ```
 
 ---
@@ -56,7 +56,7 @@ car-reviews-llm-analysis/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/ton-username/car-reviews-llm-analysis.git
+git clone https://github.com/mouelhimariem391-lang/car-reviews-llm-analysis.git
 cd car-reviews-llm-analysis
 pip install pandas torch transformers scikit-learn evaluate
 ```
@@ -68,7 +68,7 @@ pip install pandas torch transformers scikit-learn evaluate
 Ouvre le notebook et exécute les cellules dans l'ordre :
 
 ```bash
-jupyter notebook car_reviews_llm_analysis.ipynb
+jupyter notebook workspace/notebook.ipynb
 ```
 
 Le notebook charge le dataset, applique chaque modèle à la tâche correspondante, puis affiche les résultats et métriques d'évaluation.
@@ -81,7 +81,7 @@ Le notebook charge le dataset, applique chaque modèle à la tâche correspondan
 |---|---|---|
 | Sentiment | Accuracy | 0.80 |
 | Sentiment | F1-score | 0.857 |
-| Traduction | BLEU score | ~0.75 |
+| Traduction | BLEU score | ~0.78 |
 | Question-réponse | Réponse extraite | *"ride quality, reliability"* |
 | Résumé | Longueur | 50–55 tokens |
 
